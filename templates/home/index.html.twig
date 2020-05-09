@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<a href="{{ path('push') }}"><button>Envoyer</button></a>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
