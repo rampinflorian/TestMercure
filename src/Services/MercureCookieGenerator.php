@@ -34,6 +34,6 @@ class MercureCookieGenerator
             ->withClaim('mercure', [ 'subscribe' => [sprintf("/user/%s", $user->getId())]])
             ->getToken(new Sha256(), new Key($this->secret));
 
-        return Cookie::create('mercureAuthorization', $token, (new \DateTime())->add(new \DateInterval('PT5H')), '/.well-known/mercure',null,true,true,false,Cookie::SAMESITE_STRICT);
+        return Cookie::create('mercureAuthorization', $token, (new \DateTime())->add(new \DateInterval('PT5H')), '/.well-known/mercure',null,false,true,false,Cookie::SAMESITE_STRICT);
     }
 }

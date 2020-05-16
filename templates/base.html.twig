@@ -26,11 +26,11 @@
 
             eventSource.onmessage = e => {
                 console.log('message recu')
-                document.querySelector('h1').insertAdjacentHTML('afterend', `<div class="alert alert-success">Un visiteur vient de passer sur les démarches !  </div>`)
+                document.querySelector('h1').insertAdjacentHTML('afterend', `<div class="alert alert-success">Coucou je suis un visiteur !</div>`)
                 window.setTimeout(() => {
                     const $alert = document.querySelector('.alert')
                     $alert.parentNode.removeChild($alert)
-                }, 2000)
+                }, 5000)
             }
 
         })

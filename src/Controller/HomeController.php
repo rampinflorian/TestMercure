@@ -27,7 +27,7 @@ class HomeController extends AbstractController
      */
     public function PushAction(PublisherInterface $publisher)
     {
-        $target = ["/user/2"];
+        $target = ["/user/1"];
 
         $update = new Update(
             '/ping',
